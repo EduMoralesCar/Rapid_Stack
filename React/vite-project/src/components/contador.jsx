@@ -13,7 +13,7 @@ export const Contador = () => {
       setContar(contar - 1);
     }
     else {
-      alert("El contador no puede ser menor a 0");
+      alert("El contador no puede ser menor que 0");
     }
   };
 
@@ -22,7 +22,7 @@ export const Contador = () => {
   };
 
   return (
-    <div className="container now">
+    <div className="container text-center mt-5">
       <h2 className="text-dark">El contador es: {contar}</h2>
       <button className="btn btn-success mx-2" onClick={incrementar}>Incrementar</button>
       <button className="btn btn-warning mx-2" onClick={decrementar}>Decrementar</button>
