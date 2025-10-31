@@ -18,21 +18,28 @@ const productos = {
 // Mostramos la tabla de productos
 console.table(productos);
 
-//const mostrarProducto
-
 // Definimos la función mostrarProducto
 function mostrarProducto(producto) {
-    return `Nombre: ${producto.nombre}\nPrecio: $${producto.precio}\nCategoría: ${producto.categoria}\nFecha: ${producto.fecha.toLocaleDateString()}\n`;
+    return `Nombre: ${producto.nombre}\n
+    Precio: $${producto.precio}\n
+    Categoría: ${producto.categoria}\n
+    Fecha: ${producto.fecha.toLocaleDateString()}\n`;
 }
 
 // Usamos una función anónima asignada a una constante
 const mostrarProducto1 = function (producto) {
-    return `Nombre: ${producto.nombre}\nPrecio: $${producto.precio}\nCategoría: ${producto.categoria}\nFecha: ${producto.fecha.toLocaleDateString()}\n`;
+    return `Nombre: ${producto.nombre}\n
+    Precio: $${producto.precio}\n
+    Categoría: ${producto.categoria}\n
+    Fecha: ${producto.fecha.toLocaleDateString()}\n`;
 }
 
 // Convertimos a una funcion de Flechas
 const mostrarProducto2 = (producto) => {
-    return `Nombre: ${producto.nombre}\nPrecio: $${producto.precio}\nCategoría: ${producto.categoria}\nFecha: ${producto.fecha.toLocaleDateString()}\n`;
+    return `Nombre: ${producto.nombre}\n
+    Precio: $${producto.precio}\n
+    Categoría: ${producto.categoria}\n
+    Fecha: ${producto.fecha.toLocaleDateString()}\n`;
 }
 
 

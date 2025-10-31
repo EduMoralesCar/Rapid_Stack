@@ -7,7 +7,15 @@ const OperacionesMatematicas = {
     dividir: (a, b) => a / b
 }
 
+// Insertamos los valores para la operacion
+const resultados = {
+    suma: OperacionesMatematicas.sumar(5, 10),
+    resta: OperacionesMatematicas.restar(10, 5),
+    multiplicacion: OperacionesMatematicas.multiplicar(5, 10),
+    division: OperacionesMatematicas.dividir(10, 5)
+};
 
+// Funcion de Flecha para mostrar los resultados
 const ResultadoOperaciones = (resultados) => {
     console.log('Resultados de las operaciones:');
     for (const [operacion, resultado] of Object.entries(resultados)) {
@@ -15,12 +23,6 @@ const ResultadoOperaciones = (resultados) => {
     }
 }
 
-// Insertamos los valores para la operacion
-const resultados = {
-    suma: OperacionesMatematicas.sumar(5, 10),
-    resta: OperacionesMatematicas.restar(10, 5),
-    multiplicacion: OperacionesMatematicas.multiplicar(5, 10),
-    division: OperacionesMatematicas.dividir(10, 5)
-}
+
 
 ResultadoOperaciones(resultados);
