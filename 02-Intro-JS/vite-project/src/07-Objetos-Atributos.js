@@ -17,6 +17,7 @@ const tienda = {
 console.table(tienda.productos);
 console.log(tienda.mostrarProductos());
 
+// reduce realiza una operación acumulativa sobre los elementos de un array
 const precioTotal = tienda.productos.reduce((total, producto) => total + producto.precio, 0);
 
 console.log();

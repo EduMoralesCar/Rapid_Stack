@@ -2,11 +2,11 @@
 const personas = {
   persona1: {
     nombre: 'Odon Pedro',
-    apellido: 'Morales Carlos'
+    apellido: 'Carlos Perez'
   },
   persona2: {
     nombre: 'Aldo Omar',
-  apellido: 'Morales Carlos'
+  apellido: 'Becerra Lopez'
   }
 }
 
