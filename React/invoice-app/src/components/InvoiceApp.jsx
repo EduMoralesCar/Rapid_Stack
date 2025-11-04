@@ -9,33 +9,60 @@ const InvoiceApp = () => {
   return (
     <>
       <div className="container mt-5">
-        <h1 className="text-center text-primary">Invoice App</h1>
-        <h2 className="text-center text-warning">Ejemplo de Factura</h2>
-        <ul className="list-unstyled text-center mt-4">
-          <li>ID: {id}</li>
-          <li>Nombre: {name}</li>
-        </ul>
-        <h3 className="text-center text-success">Datos del Cliente</h3>
-        <ul className="list-unstyled text-center mt-4">
-          <li>Nombre: {nameClient}, {lastName}</li>
-          <li>Dirección: {street} {number}</li>
-          <li>Ciudad: {city}, {country}</li>
-        </ul>
-        <h3 className="text-center text-success mt-4">Datos de la Empresa</h3>
-        <ul className="list-unstyled text-center mt-4">
-          <li>Nombre: {company.name}</li>
-          <li>Número Fiscal: {company.fiscalNumber}</li>
-          <li>Teléfono: {company.phone}</li>
-          <li>Email: {company.email}</li>
-        </ul>
-        <h3 className="text-center text-success mt-4">Productos de la Factura</h3>
-        <ul className="list-unstyled text-center mt-4">
-          {items.map((item, index) => (
-            <li key={index}>
-              {item.product} - ${item.precio} x {item.quantity}
-            </li>
-          ))}
-        </ul>
+        <div className="card">
+          <div className="card-header text-center bg-primary">
+            <h1 className="fw-bold text-white">Invoice App</h1>
+          </div>
+          <div className="card-body">
+            <h2 className=" text-warning fw-bold">Ejemplo de Factura</h2>
+            <ul className="list-group list-unstyled mt-4">
+              <li className="list-group-item">ID: {id}</li>
+              <li className="list-group-item">Nombre: {name}</li>
+            </ul>
+            <div className="row mt-4">
+
+              <div className="col-6">
+                <h2 className="text-center text-success mt-4 fw-bold">Datos del Cliente</h2>
+                <ul className="list-group list-unstyled mt-4">
+                  <li className="list-group-item active">{nameClient}, {lastName}</li>
+                  <li className="list-group-item">{street} {number}</li>
+                  <li className="list-group-item">{country} / {city}</li>
+                </ul>
+              </div>
+
+              <div className="col-6">
+                <h2 className="text-center text-success mt-4 fw-bold">Datos de la Empresa</h2>
+                <ul className="list-group list-unstyled mt-4">
+                  <li className="list-group-item active">{company.name}</li>
+                  <li className="list-group-item">{company.phone}</li>
+                  <li className="list-group-item">{company.email}</li>
+                </ul>
+              </div>
+            </div>
+
+            <h2 className="text-center text-success mt-4 fw-bold">Productos de la Factura</h2>
+            <table className="table table-bordered container-center mt-4 text-center table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>Producto</th>
+                  <th>Cantidad</th>
+                  <th>Precio Unitario</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                {items.map((item, index) => (
+                  <tr key={index}>
+                    <td>{item.product}</td>
+                    <td>{item.quantity}</td>
+                    <td>{item.precio}</td>
+                    <td>{item.quantity * item.precio}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </>
   );

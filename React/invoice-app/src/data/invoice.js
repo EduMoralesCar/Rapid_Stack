@@ -1,7 +1,7 @@
 export const invoice = [
     {
         id: 1,
-        name: "John Doe",
+        name: "Componentes de PC",
         client: {
             name: 'Juan Perez',
             lastName: 'Gomez',
@@ -13,10 +13,10 @@ export const invoice = [
             }
         },
         company: {
-            name: 'Empresa S.A.',
+            name: 'Technology Compusearch S.A.',
             fiscalNumber: '30-12345678-9',
             phone: '+54 11 1234-5678',
-            email: 'contacto@empresa.com'
+            email: 'technology@Compusearch.com'
         },
         items: [
             {
