@@ -1,8 +1,8 @@
-import { getInvoice } from "../services/getInvoice";
-import InvoiceView from "./InvoiceView";
-import ClientView from "./ClientView";
-import CompanyView from "./CompanyView";
-import ItemListView from "./ItemListView";
+import { getInvoice } from "./services/getInvoice";
+import InvoiceView from "./components/InvoiceView";
+import ClientView from "./components/ClientView";
+import CompanyView from "./components/CompanyView";
+import ItemListView from "./components/ItemListView";
 
 const InvoiceApp = () => {
 
