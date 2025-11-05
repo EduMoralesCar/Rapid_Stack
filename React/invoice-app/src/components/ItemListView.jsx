@@ -1,4 +1,5 @@
 import ItemRowView from "./ItemRowView";
+import PropTypes from 'prop-types';
 
 const ItemListView = ({ title, items }) => {
     return (
@@ -21,6 +22,17 @@ const ItemListView = ({ title, items }) => {
             </table>
         </>
     );
+};
+
+ItemListView.propTypes = {
+    title: PropTypes.string.isRequired,
+    items: PropTypes.arrayOf(
+        PropTypes.shape({
+            description: PropTypes.string.isRequired,
+            quantity: PropTypes.number.isRequired,
+            unitPrice: PropTypes.number.isRequired
+        })
+    ).isRequired
 };
 
 export default ItemListView;

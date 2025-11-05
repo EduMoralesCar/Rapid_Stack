@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 
 const InvoiceView = ({ title, id, name }) => {
     return (
@@ -10,6 +11,12 @@ const InvoiceView = ({ title, id, name }) => {
         </>
     );
 
+};
+
+InvoiceView.propTypes = {
+    title: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired
 };
 
 export default InvoiceView;

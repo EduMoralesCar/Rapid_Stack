@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 
 const ClientView = ({ title, client }) => {
 
@@ -14,6 +15,22 @@ const ClientView = ({ title, client }) => {
             </ul>
         </>
     );
+};
+
+ClientView.propTypes = {
+    title: PropTypes.string.isRequired,
+    // client: PropTypes.object.isRequired
+    client: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        lastName: PropTypes.string.isRequired,
+        address: PropTypes.shape({
+            country: PropTypes.string.isRequired,
+            city: PropTypes.string.isRequired,
+            street: PropTypes.string.isRequired,
+            number: PropTypes.string.isRequired
+        }).isRequired
+    }).isRequired
+
 };
 
 export default ClientView;
