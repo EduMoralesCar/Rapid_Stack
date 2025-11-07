@@ -52,7 +52,7 @@ const InvoiceApp = () => {
             <TotalView title="Total a Pagar" total={total} />
 
             {/* Formulario de ejemplo para agregar nuevos productos */}
-            <div className="mt-4 card bg-light">
+            <div className="mt-4 my-3 card bg-light w-75 mx-auto">
               <h2 className="text-center text-warning fw-bold card-header bg-secondary p-4">Agregar Nuevo Producto</h2>
               <form className="container mt-4" onSubmit={handleSubmit}>
                 <div className="mb-3">
@@ -67,7 +67,7 @@ const InvoiceApp = () => {
                   <label htmlFor="unitPrice" className="form-label">Precio Unitario</label>
                   <input type="number" className="form-control" id="unitPrice" placeholder="Ingrese el precio unitario" value={priceValue} onChange={(e) => setPriceValue(e.target.value)} />
                 </div>
-                <button type="submit" className="btn btn-primary" onClick={handleSubmit}>Agregar Producto</button>
+                <button type="submit" className="btn btn-primary mb-3" onClick={handleSubmit}>Agregar Producto</button>
               </form>
             </div>
           </div>
