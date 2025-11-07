@@ -60,6 +60,9 @@ const InvoiceApp = () => {
     setQuantityValue(0);
   };
 
+  // Variable para controlar la visibilidad del formulario
+  const [activeForm, setActiveForm] = useState(false);
+
   return (
     <>
       <div className="container mt-5">
@@ -81,9 +84,11 @@ const InvoiceApp = () => {
 
             <ItemListView title="Productos de la Factura" items={items} />
             <TotalView title="Total a Pagar" total={total} />
-
-            {/* Formulario de Control de Inventario (componente separado) */}
-            <FormItemsView
+            {/* Boton para Ocultar el Formulario de Control de Inventario */}
+            <button className="btn btn-primary mb-3 fw-bold" onClick={() => setActiveForm(!activeForm)}>
+              {activeForm ? 'Ocultar' : 'Mostrar'} Formulario
+            </button>
+            {!activeForm || <FormItemsView
               productValue={productValue}
               setProductValue={setProductValue}
               priceValue={priceValue}
@@ -93,7 +98,7 @@ const InvoiceApp = () => {
               onAdd={handleSubmit}
               onUpdate={handleUpdate}
               onDelete={handleDelete}
-            />
+            />}
           </div>
         </div>
       </div>

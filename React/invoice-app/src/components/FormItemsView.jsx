@@ -15,7 +15,7 @@ const FormItemsView = ({
       <h2 className="text-center text-warning fw-bold card-header bg-secondary p-4">Control de Inventario</h2>
       <form className="container mt-4" onSubmit={onAdd}>
         <div className="mb-3">
-          <label htmlFor="description" className="form-label">Descripción</label>
+          <label htmlFor="description" className="form-label fw-bold">Descripción*</label>
           <input
             type="text"
             className="form-control"
@@ -26,7 +26,7 @@ const FormItemsView = ({
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="quantity" className="form-label">Cantidad</label>
+          <label htmlFor="quantity" className="form-label fw-bold">Cantidad*</label>
           <input
             type="number"
             className="form-control"
@@ -37,7 +37,7 @@ const FormItemsView = ({
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="unitPrice" className="form-label">Precio Unitario</label>
+          <label htmlFor="unitPrice" className="form-label fw-bold">Precio Unitario*</label>
           <input
             type="number"
             className="form-control"
@@ -47,9 +47,9 @@ const FormItemsView = ({
             onChange={(e) => setPriceValue(e.target.value)}
           />
         </div>
-        <button type="submit" className="btn btn-primary mb-3" onClick={onAdd}>Agregar Producto</button>
-        <button type="button" className="btn btn-warning mb-3 mx-2" onClick={onUpdate}>Actualizar Producto</button>
-        <button type="button" className="btn btn-danger mb-3 mx-2" onClick={onDelete}>Eliminar Producto</button>
+        <button type="submit" className="btn btn-primary mb-3 fw-bold" onClick={onAdd}>Agregar Producto</button>
+        <button type="button" className="btn btn-warning mb-3 mx-2 fw-bold" onClick={onUpdate}>Actualizar Producto</button>
+        <button type="button" className="btn btn-danger mb-3 mx-2 fw-bold" onClick={onDelete}>Eliminar Producto</button>
       </form>
     </div>
   );
