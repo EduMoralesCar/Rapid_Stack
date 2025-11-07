@@ -31,3 +31,30 @@ Estos se usan para botones, fondos, bordes, alertas, etc.
 | Light      | `.bg-light`      | `#f8f9fa` |
 | Dark       | `.bg-dark`       | `#212529` |
 | White      | `.bg-white`      | `#ffffff` |
+
+# Ver los ultimos 30 commit realizados
+## Ver los commits recientes (compacto):
+
+```bash
+git log --oneline -n 30
+```
+## Ver commits con gráfico y decoración (ramas, tags):
+
+```bash
+git log --oneline --graph --decorate -n 30
+```
+## Ver commits con más detalle (autor, fecha, mensaje completo):
+
+```bash
+git log --pretty=format:"%h %ad | %an | %s" --date=short -n 30
+```
+## Ver el diff que introdujo cada commit (por ejemplo, último commit):
+
+```bash
+git show HEAD
+```
+## Ver un commit especifico por hash:
+
+```bash
+git show <hash>
+```
