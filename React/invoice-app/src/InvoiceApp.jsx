@@ -14,7 +14,7 @@ const InvoiceApp = () => {
   const [priceValue, setPriceValue] = useState(0);
   const [quantityValue, setQuantityValue] = useState(0);
 
-  const [items, setItems] = useState(itemsInitial);
+  const [items] = useState(itemsInitial);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -24,6 +24,36 @@ const InvoiceApp = () => {
       quantity: parseInt(quantityValue, 10)
     };
     items.push(newItem);
+    setProductValue('');
+    setPriceValue(0);
+    setQuantityValue(0);
+  };
+
+  const handleUpdate = (e) => {
+    e.preventDefault();
+    const index = items.findIndex(item => item.product === productValue);
+    if (index !== -1) {
+      items[index] = {
+        product: productValue,
+        price: parseFloat(priceValue),
+        quantity: parseInt(quantityValue, 10)
+      };
+    } else {
+      alert('Producto no encontrado para actualizar');
+    }
+    setProductValue('');
+    setPriceValue(0);
+    setQuantityValue(0);
+  };
+
+  const handleDelete = (e) => {
+    e.preventDefault();
+    const index = items.findIndex(item => item.product === productValue);
+    if (index !== -1) {
+      items.splice(index, 1);
+    } else {
+      alert('Producto no encontrado para eliminar');
+    }
     setProductValue('');
     setPriceValue(0);
     setQuantityValue(0);
@@ -51,9 +81,9 @@ const InvoiceApp = () => {
             <ItemListView title="Productos de la Factura" items={items} />
             <TotalView title="Total a Pagar" total={total} />
 
-            {/* Formulario de ejemplo para agregar nuevos productos */}
+            {/* Formulario de Control de Inventario */}
             <div className="mt-4 my-3 card bg-light w-75 mx-auto">
-              <h2 className="text-center text-warning fw-bold card-header bg-secondary p-4">Agregar Nuevo Producto</h2>
+              <h2 className="text-center text-warning fw-bold card-header bg-secondary p-4">Control de Inventario</h2>
               <form className="container mt-4" onSubmit={handleSubmit}>
                 <div className="mb-3">
                   <label htmlFor="description" className="form-label">Descripción</label>
@@ -68,6 +98,8 @@ const InvoiceApp = () => {
                   <input type="number" className="form-control" id="unitPrice" placeholder="Ingrese el precio unitario" value={priceValue} onChange={(e) => setPriceValue(e.target.value)} />
                 </div>
                 <button type="submit" className="btn btn-primary mb-3" onClick={handleSubmit}>Agregar Producto</button>
+                <button type="submit" className="btn btn-warning mb-3 mx-2" onClick={handleUpdate}>Actualizar Producto</button>
+                <button type="submit" className="btn btn-danger mb-3 mx-2" onClick={handleDelete}>Eliminar Producto</button>
               </form>
             </div>
           </div>
