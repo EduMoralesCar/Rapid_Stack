@@ -21,17 +21,17 @@ export const invoice = [
         items: [
             {
                 product: 'CPU Intel i7',
-                precio: 150.00,
+                price: 150.00,
                 quantity: 2
             },
             {
                 product: 'Monitor 24 pulgadas',
-                precio: 300.00,
+                price: 300.00,
                 quantity: 1
             },
             {
                 product: 'Teclado mecánico',
-                precio: 200.00,
+                price: 200.00,
                 quantity: 1
             }
         ]

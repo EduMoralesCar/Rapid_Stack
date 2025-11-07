@@ -8,10 +8,10 @@ const ItemListView = ({ title, items }) => {
             <table className="table table-bordered container-center mt-4 text-center table-striped table-hover">
                 <thead>
                     <tr>
-                        <th>Producto</th>
-                        <th>Cantidad</th>
-                        <th>Precio Unitario</th>
-                        <th>Total</th>
+                        <th className="bg-secondary text-white">Producto</th>
+                        <th className="bg-secondary text-white">Cantidad</th>
+                        <th className="bg-secondary text-white">Precio Unitario</th>
+                        <th className="bg-secondary text-white">Total</th>
                     </tr>
                 </thead>
                 <tbody>

@@ -5,8 +5,8 @@ const ItemRowView = ({ item }) => {
         <tr>
             <td>{item.product}</td>
             <td>{item.quantity}</td>
-            <td>{item.precio}</td>
-            <td>{item.quantity * item.precio}</td>
+            <td>{item.price}</td>
+            <td>{item.quantity * item.price}</td>
         </tr>
     );
 };
