@@ -1,4 +1,4 @@
-# 🚀 REACT + SPRINGBOOT — Plantilla rápida
+# 🚀 Rapid Stack
 
 Una plantilla full‑stack pensada para entender y arrancar rápido: frontend en React y backend en Spring Boot (si lo agregas). Clara, práctica y lista para prototipos.
 
@@ -9,8 +9,8 @@ Una plantilla full‑stack pensada para entender y arrancar rápido: frontend en
 Arranca en 3 pasos (rápido y sin vueltas)
 1) Clona
 ```bash
-git clone https://github.com/EduMoralesCar/REACT_SPRINGBOOT.git
-cd REACT_SPRINGBOOT
+git clone https://github.com/EduMoralesCar/Rapid_Stack.git
+cd Rapid_Stack
 ```
 2) Frontend (React)
 ```bash
