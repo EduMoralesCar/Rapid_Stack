@@ -18,11 +18,11 @@ El proyecto ofrece sobre react y sprintBoot trabajando la parte Backend y Fronte
 ---
 
 # Herramientas usadas (recomendados)
-- ⚛️ React — v18+
-- 🟩 Node.js — v22.21 (npm v11+)
-- ☕ Java — 21+ (para Spring Boot)
-- 🧰 Spring Boot — 2.7 (según JDK)
-- 🐳 Docker — opcional para deploy
+- ⚛️ React
+- 🟩 Node.js 
+- ☕ Java
+- 🧰 Spring Boot
+- 🐳 Docker
 
 ---
 
